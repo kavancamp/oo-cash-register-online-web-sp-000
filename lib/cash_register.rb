@@ -1,13 +1,16 @@
+
 class CashRegister
- attr_accessor :total, :discount, :items, :last_transaction_amount
 
- def initialize(discount = 0)
-   @total = 0
-   @discount = discount
-   @items = []
- end
+  attr_accessor :total, :discount, :last_transaction_amount, :items
 
- def add_item(title,price,quantity = 1)
+  def initialize(discount = 0)
+    @total = 0
+    @discount = discount
+    @items = []
+  end
+
+
+  def add_item(title,price,quantity = 1)
     if quantity>1
       i=0
       while i<quantity
@@ -32,9 +35,9 @@ class CashRegister
     end
   end
 
+
   def void_last_transaction()
     @total -= @last_transaction_amount
   end
-
 
 end
