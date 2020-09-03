@@ -35,6 +35,7 @@ class CashRegister
     @total -= @price
     if quantity = 0
       total = 0.0
+    end
   end
 
 end
